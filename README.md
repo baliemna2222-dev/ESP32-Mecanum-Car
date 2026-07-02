@@ -30,7 +30,8 @@ No Ackermann steering. No blind spots. No wasted turning radius.
 Just pure, fluid, omnidirectional motion.
 
 </td>
-<img src="assets/images/car.jpeg" width="100%"/>
+<td>
+<img src="assets/images/car.jpeg" width="100%"/></td>
 </tr>
 </table>
 
