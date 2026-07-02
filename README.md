@@ -23,11 +23,13 @@
 <table>
 <tr>
 <td width="60%" valign="top">
+  
+An **ESP32-powered mecanum car** developed collaboratively by **Emna Ben Ali** and **Mohamed Ben Ali**.
 
-A collaborative build by **Emna Ben Ali** and **Mohamed Ben Ali** — an **ESP32-powered omnidirectional robot** built on **mecanum wheels**, giving it true **360° freedom of movement** — forward, backward, sideways, diagonal, and pure rotation — all without turning its chassis. Every command is sent wirelessly over **WiFi**, so the robot responds live with **zero lag control** from a browser or app interface.
+This project demonstrates how mecanum wheels can provide smooth **360° omnidirectional movement**, allowing the car to move forward, backward, sideways, diagonally, and rotate in place without changing its orientation.
 
-No Ackermann steering. No blind spots. No wasted turning radius.
-Just pure, fluid, omnidirectional motion.
+The car is controlled wirelessly over **WiFi**, enabling responsive, real-time control through a web interface. Built by combining embedded systems, robotics, and wireless communication, the project offers a practical foundation for learning, experimentation, and future robotic applications.
+
 
 </td>
 <td>
