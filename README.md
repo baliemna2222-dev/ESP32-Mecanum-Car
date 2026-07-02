@@ -159,14 +159,33 @@ Each motor uses **two GPIO pins** for direction control, while speed is managed 
 
 ---
 
-## ⚙️ Mecanic (Mechanical Assembly)
-
-The chassis and drivetrain were built and assembled to hold the four mecanum wheels, motors, and electronics securely while keeping the robot lightweight and balanced.
-
-- **Chassis** — mounts motors, battery, and electronics
-- **4× Mecanum Wheels** — angled rollers enabling omnidirectional motion
-- **Motor Mounts** — secure each DC motor to the chassis frame
-- **3D-Printed Parts** — custom brackets and holders where needed
+## 🧩 How Mecanum Wheels Work (Mechanically)
+ 
+Each mecanum wheel has small **rollers** around its rim, angled at **45°**. These rollers spin freely on their own, separate from the wheel's rotation.
+ 
+When the wheel spins, the angled rollers push the force in two directions at once — partly forward, partly sideways.
+ 
+<div align="center">
+<img src="assets/images/mecanum_wheel_architecture.jpg" width="70%"/>
+</div>
+> 🖼️ *Simulation showing how the roller angle splits the force into forward and sideways motion.*
+ 
+**The four wheels work as a team.** They're mounted so each wheel's rollers angle opposite to its diagonal partner. By spinning each wheel at a different speed and direction, the robot can move any way — forward, sideways, diagonal, or spin in place — with no steering parts at all.
+ 
+| Motion | FL | FR | BL | BR |
+|:---|:---:|:---:|:---:|:---:|
+| Forward | + | + | + | + |
+| Backward | − | − | − | − |
+| Strafe Right | + | − | − | + |
+| Strafe Left | − | + | + | − |
+| Diagonal ↗ | + | 0 | 0 | + |
+| Diagonal ↖ | 0 | + | + | 0 |
+| Rotate CW | + | − | + | − |
+| Rotate CCW | − | + | − | + |
+ 
+*(+ = spins forward, − = spins backward, 0 = stays still)*
+ 
+📺 [The Simple Mechanics of Mecanum Wheels](https://www.youtube.com/watch?v=0k-Ey9bS9lE)
 
 <div align="center">
 <img src="assets/images/mecanum_wheel_controll.jpeg" width="70%"/>
