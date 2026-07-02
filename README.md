@@ -47,10 +47,12 @@ Just pure, fluid, omnidirectional motion.
 </table>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500">
+  <video src="https://github.com/user-attachments/assets/735bc008-01eb-4c23-955c-d4ed90044f93" controls muted width="600">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
-> 🎥 *Replace the GIF above with your own robot demo — a screen recording of the WiFi controller in action + robot moving looks incredible here.*
+> 🎥 *Live demo of the WiFi controller driving the robot — forward, strafe, diagonal, and rotation in action.*
 
 ---
 
