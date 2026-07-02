@@ -30,19 +30,7 @@ No Ackermann steering. No blind spots. No wasted turning radius.
 Just pure, fluid, omnidirectional motion.
 
 </td>
-<td width="40%">
-
-```
-     ↖  ↑  ↗
-      \ | /
-   ←— [ROBOT] —→
-      / | \
-     ↙  ↓  ↘
-
-  + full rotation ⟳
-```
-
-</td>
+<img src="assets/images/car.jpeg" width="100%"/>
 </tr>
 </table>
 
