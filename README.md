@@ -66,3 +66,57 @@ The car is controlled wirelessly over **WiFi**, providing responsive real-time c
 | ⚡ | Real-Time Response | Low-latency command execution |
 | 🎨 | Web Interface | Simple and intuitive directional control |
 | 🔧 | Modular Code | Separated motor, WiFi, and control logic |
+
+---
+
+## 🧠 How It Works
+
+The robot uses an ESP32 to receive movement commands over WiFi from a web interface.
+
+Each command is translated into motor signals using PWM control. By adjusting the speed and direction of the four mecanum wheels independently, the robot can move in any direction or rotate in place.
+
+The ESP32 continuously listens for incoming commands and updates motor outputs in real time for smooth control.
+
+---
+
+## 🔧 Build Process (Electronics & Wiring)
+
+This section explains how the mechanical and electronic parts of the robot are connected, from motors to ESP32 control.
+
+<div align="center">
+<img src="assets/images/car_microcontroller.jpeg" width="50%"/>
+  <img src="assets/images/car.jpeg" width="50%"/>
+</div>
+
+> 🖼️ *Overview of the electronics layout — ESP32, motor drivers, and wiring connections.*
+
+## ⚙️ Motor Driver Setup (Dual H-Bridge)
+
+This robot uses **two H-bridge motor drivers** (Pont H) to control the four DC motors independently.
+
+Each motor driver controls two wheels:
+
+- Driver 1 → Left side motors (Front Left + Back Left)
+- Driver 2 → Right side motors (Front Right + Back Right)
+
+This setup ensures stable current handling and simplifies wiring for the mecanum system.
+
+<div align="center">
+<img src="assets/images/pont-h.webp" width="70%"/>
+</div>
+
+> 🖼️ *Dual H-bridge motor driver .*
+
+### 🧠 H-Bridge Working Principle
+
+| IN1 | IN2 | Motor Direction |
+|-----|-----|----------------|
+| 1   | 0   | Forward        |
+| 0   | 1   | Backward       |
+| 0   | 0   | Stop           |
+| 1   | 1   | Brake          |
+
+<div align="center">
+<img src="assets/images/h-bridge-elctronic.png" width="70%"/>
+</div>
+
