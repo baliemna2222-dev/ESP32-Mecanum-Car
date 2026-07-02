@@ -84,20 +84,21 @@ The ESP32 continuously listens for incoming commands and updates motor outputs i
 This section explains how the mechanical and electronic parts of the robot are connected, from motors to ESP32 control.
 
 <div align="center">
-<img src="assets/images/car_microcontroller.jpeg" width="50%"/>
-  <img src="assets/images/car.jpeg" width="50%"/>
+<img src="assets/images/car_microcontroller.jpeg" width="70%"/>
 </div>
 
 > 🖼️ *Overview of the electronics layout — ESP32, motor drivers, and wiring connections.*
 
 ## ⚙️ Motor Driver Setup (Dual H-Bridge)
 
-This robot uses **two H-bridge motor drivers** (Pont H) to control the four DC motors independently.
+The robot uses **two H-bridge drivers** to control four DC motors:
 
-Each motor driver controls two wheels:
+- Left side motors → H-Bridge 1
+- Right side motors → H-Bridge 2
 
-- Driver 1 → Left side motors (Front Left + Back Left)
-- Driver 2 → Right side motors (Front Right + Back Right)
+Each motor is controlled using:
+- Digital pins → direction
+- PWM signal → speed
 
 This setup ensures stable current handling and simplifies wiring for the mecanum system.
 
@@ -120,3 +121,55 @@ This setup ensures stable current handling and simplifies wiring for the mecanum
 <img src="assets/images/h-bridge-elctronic.png" width="70%"/>
 </div>
 
+### 🔌 2. ESP32 to Dual Motor Driver Wiring
+
+The ESP32 controls **two H-bridge motor drivers**, each responsible for two motors (left and right sides).  
+Each motor uses **two GPIO pins** for direction control, while speed is managed using PWM.
+
+### 🚗 Motor Mapping
+
+| Wheel | ESP32 Pins | Motor Driver |
+|------|------------|--------------|
+| Back Left (BL) | GPIO 12, GPIO 13 | H-Bridge 1 (IN1 / IN2) |
+| Front Left (FL) | GPIO 14, GPIO 27 | H-Bridge 1 (IN3 / IN4) |
+| Front Right (FR) | GPIO 2, GPIO 0 | H-Bridge 2 (IN1 / IN2) |
+| Back Right (BR) | GPIO 16, GPIO 4 | H-Bridge 2 (IN3 / IN4) |
+
+---
+
+## 🔌 Electronics
+
+<div align="center">
+
+| Component | Role |
+|:---|:---|
+| **ESP32 Dev Board** | Main controller — WiFi server + motor logic |
+| **2× H-Bridge Motor Drivers** | Independent direction + PWM speed control per side |
+| **4× DC Motors** | One per mecanum wheel |
+| **Battery Pack** | Powers motors and ESP32, separate rails recommended |
+| **Jumper Wires / Connectors** | GPIO-to-driver and driver-to-motor wiring |
+
+</div>
+
+<div align="center">
+<img src="assets/images/car.jpeg" width="70%"/>
+</div>
+
+> 🖼️ *All electronic components after wiring.*
+
+---
+
+## ⚙️ Mecanic (Mechanical Assembly)
+
+The chassis and drivetrain were built and assembled to hold the four mecanum wheels, motors, and electronics securely while keeping the robot lightweight and balanced.
+
+- **Chassis** — mounts motors, battery, and electronics
+- **4× Mecanum Wheels** — angled rollers enabling omnidirectional motion
+- **Motor Mounts** — secure each DC motor to the chassis frame
+- **3D-Printed Parts** — custom brackets and holders where needed
+
+<div align="center">
+<img src="assets/images/mecanum_wheel_controll.jpeg" width="70%"/>
+</div>
+
+> 🖼️ *Chassis and mecanum wheel assembly.*
