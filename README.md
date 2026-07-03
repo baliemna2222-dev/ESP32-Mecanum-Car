@@ -269,3 +269,19 @@ A behind-the-scenes look at how the robot came together — from first upload to
 > The final, working `car_manipulation.mp4` demo shown at the top of this README.
  
 </details>
+
+## 🧪 In a Nutshell
+
+This project was built collaboratively by **Emna Ben Ali** and **Mohamed Ben Ali**, combining embedded systems, robotics, and practical hands-on development.
+
+From hardware assembly to ESP32 firmware and WiFi control, each part was designed and tested through continuous iteration and teamwork until the robot achieved smooth omnidirectional movement.
+
+More than just a mecanum car, it represents a learning experience in robotics, wireless communication, and real-world system integration.
+
+Special thanks to **[Maker Skills](https://www.makerskills.tn/)** for their support and resources. 
+<div align="center">
+<img src="https://img.shields.io/badge/Made%20by-Emna%20Ben%20Ali%20%26%20Mohamed%20Ben%20Ali-ff4fa3?style=for-the-badge"/>
+<br/><br/>
+ 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff4fa3,50:8a2a68,100:1a0b1f&height=120&section=footer" width="100%"/>
+</div>
