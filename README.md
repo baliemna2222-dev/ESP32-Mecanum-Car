@@ -703,5 +703,3 @@ void handleSpeed() {
 ```
  
 </details>
-
-> 🖼️ *Chassis and mecanum wheel assembly.* after that
