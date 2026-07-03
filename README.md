@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0b1f,50:8a2a68,100:ff4fa3&height=220&section=header&text=ESP32%20Mecanum%20Robot&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Omnidirectional%20WiFi-Controlled%20Rover&descAlignY=55&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0b1f,50:8a2a68,100:ff4fa3&height=220&section=header&text=ESP32%20Mecanum%20Car&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Omnidirectional%20WiFi-Controlled%20Car&descAlignY=55&descSize=18" width="100%"/>
 
 <a href="https://github.com/baliemna2222-dev/ESP32-Mecanum-Robot">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=2600&pause=900&color=FF4FA3&center=true&vCenter=true&width=700&lines=%E2%80%8AForward+%E2%80%A2+Backward+%E2%80%A2+Strafe+%E2%80%A2+Diagonal+%E2%80%A2+Rotate;%E2%80%8A360%C2%B0+Movement+with+4+Mecanum+Wheels;%E2%80%8AControlled+Live+over+WiFi+%F0%9F%93%A1;%E2%80%8ABuilt+on+ESP32+%E2%9A%A1"/>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=2600&pause=900&color=FF4FA3&center=true&vCenter=true&width=700&lines=Forward+%E2%80%A2+Backward+%E2%80%A2+Strafe+%E2%80%A2+Diagonal+%E2%80%A2+Rotate;360%C2%B0+Movement+with+4+Mecanum+Wheels;Controlled+Live+over+WiFi+%F0%9F%93%A1;Built+on+ESP32+%E2%9A%A1"/>
 </a>
 
 <br/>
