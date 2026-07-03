@@ -68,6 +68,19 @@ The car is controlled wirelessly over **WiFi**, providing responsive real-time c
 | 🔧 | Modular Code | Separated motor, WiFi, and control logic |
 
 ---
+## 🧭 System Architecture
+
+The system is divided into three main layers:
+
+📱 Control Interface (Web Browser)
+        ↓ WiFi (HTTP Requests)
+🧠 ESP32 Microcontroller
+        ↓ GPIO + PWM Signals
+⚙️ Dual H-Bridge Drivers
+        ↓ Power + Direction Control
+🚗 4× DC Motors (Mecanum Wheels)
+        ↓
+🔄 Omnidirectional Motion
 
 ## 🧠 How It Works
 
@@ -192,3 +205,58 @@ When the wheel spins, the angled rollers push the force in two directions at onc
 </div>
 
 > 🖼️ *Chassis and mecanum wheel assembly.*
+
+## 🕹️ Control Interface
+ 
+The robot is controlled through a **web page hosted directly on the ESP32** — no app install needed. The ESP32 runs its own WiFi access point (`MecanumCar`), and any phone or laptop that connects to it can open the control page straight from a browser.
+ 
+**How it works:**
+- The ESP32 serves an HTML/CSS/JS control panel with a dark glassmorphism UI
+- 8 directional buttons (forward, backward, strafe, diagonals) plus rotate left/right and stop
+- Buttons are **hold-to-move**: pressing sends the move command, releasing sends stop — works with mouse and touch, so it's fully usable on mobile
+- A live **speed slider** (0–100%) adjusts PWM output in real time via a `/speed` endpoint
+- Each button press hits a lightweight `/cmd?move=...` endpoint, which the ESP32 maps directly to motor logic — keeping the interface fast and the firmware simple
+<details>
+<summary><b>📄 View Full Firmware Code (ESP32 + Web Control Interface)</b></summary>
+```cpp
+//https://robotlk.com/
+//https://www.youtube.com/@RobotLk
+#include <WiFi.h>
+#include <WebServer.h>
+ 
+const char* ssid = "MecanumCar";
+const char* password = "12345678";
+int speedPercent = 100;
+ 
+WebServer server(80);
+ 
+// Motor pins
+int IN1 = 12, IN2 = 13;   // back Left
+int IN3 = 14, IN4 = 27;   // Front left
+int IN5 = 2, IN6 = 0;   // front right
+int IN7 = 16, IN8 = 4;   // Back Right
+ 
+void setup() {
+  Serial.begin(115200);
+ 
+  pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT); pinMode(IN4, OUTPUT);
+  pinMode(IN5, OUTPUT); pinMode(IN6, OUTPUT);
+  pinMode(IN7, OUTPUT); pinMode(IN8, OUTPUT);
+ 
+  WiFi.softAP(ssid, password);
+  Serial.println(WiFi.softAPIP());
+ 
+  server.on("/", handleRoot);
+  server.on("/cmd", handleCommand);
+  server.begin();
+  server.on("/speed", handleSpeed);
+}
+ 
+void loop() {
+  server.handleClient();
+}
+<div align="center">
+<img src="assets/images/controller.jpeg" width="70%"/>
+</div>
+> 🖼️ *Control Interface ScreenShot.*
