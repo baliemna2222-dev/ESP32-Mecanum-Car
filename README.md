@@ -228,7 +228,7 @@ A behind-the-scenes look at how the robot came together — from first upload to
 <details>
 <summary><b>2️⃣ First WiFi Control Check</b></summary>
 <div align="center">
-<video src="assets/videos/first_wifi_control_check.mp4" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/da382cb0-d3ab-4932-ae91-96e2213c5eb5" controls muted width="500"></video>
 </div>
 > First successful connection to the ESP32's WiFi access point and initial control test.
  
@@ -236,7 +236,7 @@ A behind-the-scenes look at how the robot came together — from first upload to
 <details>
 <summary><b>3️⃣ Checking Car Behavior</b></summary>
 <div align="center">
-<video src="assets/videos/check_car_behavior.mp4" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/5c06c243-434d-41fa-937e-ceec675c9753" controls muted width="500"></video>
 </div>
 > Early test of the car's response to basic movement commands.
  
@@ -244,10 +244,10 @@ A behind-the-scenes look at how the robot came together — from first upload to
 <details>
 <summary><b>4️⃣ Fix Iterations</b></summary>
 <div align="center">
-<video src="assets/videos/car_fix.mp4" controls muted width="500"></video>
-<video src="assets/videos/car_fix1.mp4" controls muted width="500"></video>
-<video src="assets/videos/car_fix2.mp4" controls muted width="500"></video>
-<video src="assets/videos/car_fix3.mp4" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/046dd435-1c78-4119-966a-74a73fc16e7c" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/93b3b3e7-c80a-48ec-b5f1-a296e39c4cc1" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/cb181bed-d23d-442a-9974-46c312364e2c" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/e9421a7c-0751-4333-a62c-e34f26e291a9" controls muted width="500"></video>
 </div>
 > Debugging and fixing motor/wiring issues across several iterations.
  
@@ -255,8 +255,8 @@ A behind-the-scenes look at how the robot came together — from first upload to
 <details>
 <summary><b>5️⃣ Checking All Movements</b></summary>
 <div align="center">
-<video src="assets/videos/check_all_movements.mp4" controls muted width="500"></video>
-<video src="assets/videos/more_movements_try.mp4" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/555ff487-c7b3-4d34-b684-d7a0502952e2" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/0da0d8e7-fb9d-4aa4-92c3-6378bef935df" controls muted width="500"></video>
 </div>
 > Verifying every direction — forward, strafe, diagonal, and rotation — once the fixes were in place.
  
