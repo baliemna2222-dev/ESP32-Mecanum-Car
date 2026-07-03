@@ -212,3 +212,60 @@ The robot is controlled through a **web page hosted directly on the ESP32** — 
 <img src="assets/images/controller.jpeg" width="70%"/>
 </div>
 > 🖼️ *control Interface final version .*
+
+## 🎬 Development & Testing Log
+ 
+A behind-the-scenes look at how the robot came together — from first upload to final movement checks.
+ 
+<details>
+<summary><b>1️⃣ Flashing the Firmware</b></summary>
+<div align="center">
+<video src="assets/videos/code_uploading.mp4" controls muted width="500"></video>
+</div>
+> Uploading the firmware to the ESP32 for the first time.
+ 
+</details>
+<details>
+<summary><b>2️⃣ First WiFi Control Check</b></summary>
+<div align="center">
+<video src="assets/videos/first_wifi_control_check.mp4" controls muted width="500"></video>
+</div>
+> First successful connection to the ESP32's WiFi access point and initial control test.
+ 
+</details>
+<details>
+<summary><b>3️⃣ Checking Car Behavior</b></summary>
+<div align="center">
+<video src="assets/videos/check_car_behavior.mp4" controls muted width="500"></video>
+</div>
+> Early test of the car's response to basic movement commands.
+ 
+</details>
+<details>
+<summary><b>4️⃣ Fix Iterations</b></summary>
+<div align="center">
+<video src="assets/videos/car_fix.mp4" controls muted width="500"></video>
+<video src="assets/videos/car_fix1.mp4" controls muted width="500"></video>
+<video src="assets/videos/car_fix2.mp4" controls muted width="500"></video>
+<video src="assets/videos/car_fix3.mp4" controls muted width="500"></video>
+</div>
+> Debugging and fixing motor/wiring issues across several iterations.
+ 
+</details>
+<details>
+<summary><b>5️⃣ Checking All Movements</b></summary>
+<div align="center">
+<video src="assets/videos/check_all_movements.mp4" controls muted width="500"></video>
+<video src="assets/videos/more_movements_try.mp4" controls muted width="500"></video>
+</div>
+> Verifying every direction — forward, strafe, diagonal, and rotation — once the fixes were in place.
+ 
+</details>
+<details>
+<summary><b>6️⃣ Final Demo</b></summary>
+<div align="center">
+<video src="https://github.com/user-attachments/assets/735bc008-01eb-4c23-955c-d4ed90044f93" controls muted width="500"></video>
+</div>
+> The final, working `car_manipulation.mp4` demo shown at the top of this README.
+ 
+</details>
