@@ -220,7 +220,7 @@ A behind-the-scenes look at how the robot came together — from first upload to
 <details>
 <summary><b>1️⃣ Flashing the Firmware</b></summary>
 <div align="center">
-<video src="assets/videos/code_uploading.mp4" controls muted width="500"></video>
+<video src="https://github.com/user-attachments/assets/34694f4f-8a5f-49ef-81c3-ddbb7b9b13a8" controls muted width="500"></video>
 </div>
 > Uploading the firmware to the ESP32 for the first time.
  
